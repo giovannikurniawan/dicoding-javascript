@@ -130,34 +130,34 @@
 
 // cara menggunakan class
 
-class Car {
-  constructor(brand, color, maxSpeed) {
-    this.brand = brand;
-    this.color = color;
-    this.maxSpeed = maxSpeed;
-    //set a random chassis number
-    this.chassisNumber = `${brand}-${Math.floor(Math.random() * 1000) + 1}`;
-    // Namun, adakalanya nilai properti juga bisa didefinisikan di dalam class itu sendiri. Contohnya, kita tidak ingin pengguna menentukan nomor rangka mobil secara mandiri, maka kita bisa memberi nilai properti chassisNumber langsung di dalam fungsi constructor.
-  }
+// class Car {
+//   constructor(brand, color, maxSpeed) {
+//     this.brand = brand;
+//     this.color = color;
+//     this.maxSpeed = maxSpeed;
+//     //set a random chassis number
+//     this.chassisNumber = `${brand}-${Math.floor(Math.random() * 1000) + 1}`;
+//     // Namun, adakalanya nilai properti juga bisa didefinisikan di dalam class itu sendiri. Contohnya, kita tidak ingin pengguna menentukan nomor rangka mobil secara mandiri, maka kita bisa memberi nilai properti chassisNumber langsung di dalam fungsi constructor.
+//   }
 
-  // drive() {
-  //   console.log(`${this.brand} ${this.color} is driving`);
-  // }
+//   // drive() {
+//   //   console.log(`${this.brand} ${this.color} is driving`);
+//   // }
 
-  // reverse() {
-  //   console.log(`${this.brand} ${this.color} is reversing`);
-  // }
+//   // reverse() {
+//   //   console.log(`${this.brand} ${this.color} is reversing`);
+//   // }
 
-  // turn() {
-  //   console.log(`${this.brand} ${this.color} is turning`);
-  // }
-}
+//   // turn() {
+//   //   console.log(`${this.brand} ${this.color} is turning`);
+//   // }
+// }
 
-const car1 = new Car ('subaru', 'red', 200);
+// const car1 = new Car ('subaru', 'red', 200);
 
-console.log(car1);
+// console.log(car1);
 
-// car1.turn();
+// // car1.turn();
 
 // Contoh lain, jika Anda membuat class Mail, secara umum propertinya adalah sender, receiver, subject, dan body.
 
@@ -170,4 +170,20 @@ console.log(car1);
 //     this.body = body;
 //   }
 // }
+
+// // Lalu, bagaimana cara memproteksi agar nilai dari properti chassisNumber tidak dapat diubah? Nah, ketika kita berhadapan dengan kasus seperti ini, kita bisa memanfaatkan properti getter dan setter.
+
+// Sebelum memecahkan masalah di atas, ketahuilah bahwa ada dua tipe properti, yaitu data property dan accessor property.
+
+// Data property merupakan properti yang sejauh ini kita lihat, properti yang langsung menampung sebuah nilai di dalam sebuah objek.
+
+// Sedangkan accessor property merupakan properti yang dikontrol oleh sebuah getter dan setter. Nilai yang didapatkan dari properti tersebut dikontrol oleh method get dan cara menetapkan nilai tersebut dikontrol oleh method set.
+
+// Berikut contoh dari accessor property.
+
+class User {
+  constructor(firstName, lastName) {
+
+  }
+}
 
